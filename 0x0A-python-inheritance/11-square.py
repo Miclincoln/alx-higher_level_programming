@@ -1,22 +1,23 @@
-#!/usr/bin/python3
-
-""" A class module """
-
-Rectangle = __import__('9-rectangle').Rectangle
+"""Module containing ``Square`` class inheriting from
+``Rectangle`` class
+"""
 
 
-class Square(Rectangle):
-    """ 
-    Definition of calss ``Square``.
+base_g = __import__('9-rectangle')
 
-    args:
-        Rectangle: Inherited class
-    """
+
+class Square(base_g.Rectangle):
+    """Class definition"""
     def __init__(self, size):
-        """ Initializing class ``Square``"""
-
+        """Initialize the square attributes"""
+        super().integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
 
+    def area(self):
+        """Compute the area of the square"""
+        return self.__size ** 2
+
     def __str__(self):
-        return "[Square] {:d}/{:d}".format(self.__size, self.__size
+        """String representation"""
+        return f"[Square] {self.__size}/{self.__size}"
