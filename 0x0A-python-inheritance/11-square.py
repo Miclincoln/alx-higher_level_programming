@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """Module containing ``Square`` class inheriting from
 ``Rectangle`` class
 """
