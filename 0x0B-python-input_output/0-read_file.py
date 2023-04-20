@@ -12,4 +12,5 @@ def read_file(filename=""):
         Reads the text file to stdout.
     """
     with open('my_file_0.txt', mode='r', encoding='utf-8')as file1:
-        print(file1.read(), end="")
+        for text in file1:
+            print(text, end="")
